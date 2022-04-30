@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <style>
+        body{
+            width:90%;
+            display:flex;
+        }
+        
+        .cards{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            width:20%;
+            
+            margin-right:20px;
+            
+        }
+        .co_logo{
+            width:30%;
+            display:block;
+            margin:auto;
+        }
+        .pic{
+            width:100%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+var x=JSON.parse(localStorage.getItem("Investor Detail"));
+ x.forEach(function (ele){
+    var box1= document.createElement("img");
+    box1.setAttribute("class","pic");
+    box1.setAttribute("src",ele.Image);
+    
+    
+    var box2=document.createElement("p");
+    box2.innerText=ele.Name;
+    var box3=document.createElement("p");
+    box3.innerText=ele.Position;
+    var box4=document.createElement("img");
+    box4.setAttribute("class","co_logo");
+    box4.setAttribute("src",ele.CompanyLogo);
+    var box=document.createElement("div");
+    box.setAttribute("class","cards");
+    box.append(box1,box2,box3,box4);
+    
+    
+    
+    document.querySelector("body").append(box);
+   
+ })
+
+</script>

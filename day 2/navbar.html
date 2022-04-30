@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+   #main{
+       
+       display:flex;
+       background-color:blue;
+       
+   }
+   a{
+       font-size:20px;
+       color:black;
+       margin-right:300px;
+   }
+    </style>
+
+</head>
+<body>
+    <div id="main">
+     <div><a href="backend.html">Backend</a></div>
+     <div><a href="frontend.html">Frontend</a></div>
+    </div>
+    
+     <form id="main_form">
+        <input id="name" type="text" placeholder="Enter name"/>
+        <input id="image" type="text" placeholder="Enter URL"/>
+        <input id="logo" type="text" placeholder="Enter logo"/>
+        <input id="role" type="role" placeholder="Enter role"/>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("#main_form").addEventListener("submit",myFunc);
+   
+    var data=JSON.parse(localStorage.getItem("Investor Detail"))||[];
+    function myFunc()
+    {
+        event.preventDefault();
+        var investorData={
+               Name:main_form.name.value,
+               Image:main_form.image.value,
+               CompanyLogo:main_form.logo.value,
+               Position:main_form.role.value
+               
+
+        };
+        data.push(investorData);
+        
+        localStorage.setItem("Investor Detail",JSON.stringify(data));
+    }
+
+</script>
+<!-- data.push(investorData);
+        localStorage.setItem("Investor Detail",investorData); -->
