@@ -1,0 +1,52 @@
+
+        #container{
+            width:90%;
+            margin:auto;
+        display:grid;
+        grid-template-rows:repeat(9,auto);
+        grid-template-columns:repeat(4,1fr);
+        gap:20px;
+        
+        
+        }
+       #container>div{
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+           
+       }
+       .pic{
+           width:100%;
+           display:block;
+           margin:auto;
+       }   
+       .name{
+           font-weight: bold;
+           padding-left:10px;
+       }
+       .price{
+            font-weight: bold;
+            font-size: 20px;
+       }
+       #container>div>div{
+           display:flex;
+           
+           
+           padding-left:160px;
+       }
+       #container>div>div>p:last-child{
+           text-decoration: line-through;
+           color:grey;
+           font-size: 20px;
+           margin-left:30px;
+           
+       }
+      
+       button{
+        padding:10px 20px;
+        background-color: green;
+        font-size:18px;
+        color:white;
+        font-weight:bold;
+        display:block;
+        margin:auto;
+       }
+    
